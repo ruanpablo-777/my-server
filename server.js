@@ -15,7 +15,7 @@ const port = process.env.PORT || 3000;
 app.use('/', express.static(path.join(__dirname,'rotas/my-web-site')));
 
 // Serve jogodavelha na rota /jogodavelha
-app.use('/jogodavelha', express.static(path.join(__dirname,'rotas/public/jogodavelha')));
+app.use('/jogodavelha', express.static(path.join(__dirname,'rotas/jogodavelha/public')));
 
 // para qualquer rota não encontrada
 app.use((req, res) => {
