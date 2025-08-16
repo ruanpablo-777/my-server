@@ -14,5 +14,5 @@ COPY . .
 #expor a porta ( Render cuida disso via $PORT)
 EXPOSE 3000
 
-#ROda servidor
+#Roda servidor
 CMD ["npm", "start"]
