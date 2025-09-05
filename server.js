@@ -1,6 +1,10 @@
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
+<<<<<<< HEAD
+=======
+import cors from 'cors'
+>>>>>>> parent of bcff970 (fix my site)
 import './rotas/todolist/todo-list-backend/server.js';
 const app = express()
 
