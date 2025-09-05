@@ -1,19 +1,18 @@
 {
   "dependencies": {
     "express": "^5.1.0",
-    "init": "^0.1.2"
+    "init": "^0.1.2",
+    "concurrently": "^9.2.1"
   },
   "name": "my-server",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {
-    "concurrently": "^9.2.1"
-  },
+  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:frontend":"cd ./rotas/todolist/todo-list && npm run dev",
-    "start:backend":"cd ./rotas/todolist/todo-list-backend && node server.js",
-    "start:server":"node server.js",
+    "start:frontend": "cd ./rotas/todolist/todo-list && npm run dev",
+    "start:backend": "cd ./rotas/todolist/todo-list-backend && node server.js",
+    "start:server": "node server.js",
     "start": "concurrently  \"npm run start:server\" \"npm run start:frontend\" \"npm run start:backend\""
   },
   "repository": {
