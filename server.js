@@ -2,7 +2,6 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import cors from 'cors'
-import {addTask, deleteTask, editTask, showTask} from './rotas/todolist/todo-list-backend/server.js';
 const app = express()
 
 app.use(cors())
@@ -21,30 +20,7 @@ app.use('/', express.static(path.join(__dirname,'rotas/my-web-site')));
 // Serve jogodavelha na rota /jogodavelha
 app.use('/jogodavelha', express.static(path.join(__dirname,'rotas/jogodavelha')));
 
-// Serve a pasta dist do React em /todolist
-app.use('/todolist', express.static(path.join(__dirname, 'rotas/todolist/todo-list/dist')));
-
-// Fallback para React Router (SPA)
-app.get('/todolist', (req, res) => {
-  res.sendFile(path.join(__dirname, 'rotas/todolist/todo-list/dist', 'index.html'));
-});
-
-//todolist BACKEND
-app.get("/tasks", async (req, res) => {
-  showTask(req, res)
-})
-
-app.post("/tasks", async (req, res) => {
-  addTask(req, res)
-})
-
-app.put("/tasks/:id", async (req, res) => {
-  editTask(req, res)
-})
-
-app.delete("/tasks/:id", async (req, res) => {
-  deleteTask(req, res)
-})
+app.use('/chess', express.static(path.join(__dirname, "rotas/chess")))
 
 // para qualquer rota não encontrada
 app.use((req, res) => {
@@ -55,5 +31,3 @@ app.use((req, res) => {
 app.listen(port, () => {
   console.log(`Servidor rodando na porta ${port}`);
 });
-
-//h

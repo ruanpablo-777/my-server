@@ -1,9 +1,14 @@
 {
   "dependencies": {
-    "concurrently": "^9.2.1",
+    "@prisma/client": "^5.18.0",
+    "concurrently": "^3.5.1",
     "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "express": "^5.1.0",
-    "init": "^0.1.2"
+    "generate": "^0.14.0",
+    "init": "^0.1.2",
+    "mongodb": "^6.19.0",
+    "mongoose": "^8.18.1"
   },
   "type": "module",
   "name": "my-server",
@@ -24,5 +29,8 @@
     "url": "https://github.com/ruanpablo-777/my-server/issues"
   },
   "homepage": "https://github.com/ruanpablo-777/my-server#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "prisma": "^6.15.0"
+  }
 }
