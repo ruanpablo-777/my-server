@@ -23,19 +23,21 @@ let tabuleiro = [
  
 box.forEach((element, index) => {
   element.addEventListener("click", () => {
+    clicks.push(element.id);
 
     let hasPeao = !pecasId[0];
     let positionNow = clicks[0];
     let positionChoosed = parseFloat(positionNow - 2.0).toFixed(1);
     let verifyPositionChoosed = positionChoosed == parseFloat(clicks[clicks.length - 1]).toFixed (1); // verify your last click last box choosed :)
-
+    
     console.log(clicks);
     console.log(hasPeao)
-    clicks.push(element.id);
     console.log(verifyPositionChoosed)
-
+    
     if (allowTwoPass && verifyPositionChoosed) {
       movePeaoTwoPass(positionChoosed, verifyPositionChoosed);
+    console.log(clicks);
+
     } else {
       let positionChoosed = parseFloat(positionNow - 1.0).toFixed(1);
       let verifyPositionChoosed = positionChoosed == parseFloat(clicks[clicks.length - 1]).toFixed(1);
@@ -67,15 +69,15 @@ function movePeaoTwoPass(positionChoosed, verifyPositionChoosed) {
 }
 
 function movePeaoOnePass(positionChoosed, verifyPositionChoosed) {
-    if (verifyPositionChoosed) {
+   if (verifyPositionChoosed) {
     let getPeao = document.getElementById(`${pecasId[0]}`);
     let boxPosition = document.getElementById(`${positionChoosed}`);
     boxPosition.appendChild(getPeao);
     clicks = [];
     pecasId = [];
-        allowTwoPass = false  
-
-  }
+    allowTwoPass = false  
+   }
+  
 }
 
 //change the box to tabuleiro.js and usar o atributo para o peao
