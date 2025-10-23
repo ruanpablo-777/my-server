@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>xadrez</title>
+    <title>Chess</title>
   </head>
   <body>
     <div class="container">
@@ -27,13 +27,24 @@
       </div>
     </div>
   </body>
-  <script src="tabuleiro.js"></script>
-  <script src="pieces/blackPieces/pawns/createPawnsBlack.js"></script>
-  <script src="pieces/whitePieces/pawns/createPawnsWhite.js"></script>
-  <script src="pieces/blackPieces/horse/createBlackhorse.js"></script>
-  <script src="pieces/blackPieces/pawns/moveBlackPawn.js"></script>
-  <script src="pieces/blackPieces/pawns/pawnBlack.js"></script>
-  <script src="pieces/whitePieces/pawns/pawnWhite.js"></script>
-  <script src="pieces/blackPieces/horse/blackHorse.js"></script>
-  <script src="pieces/blackPieces/pawns/killOponent.js"></script>
+  <script src="src/createTabuleiro/tabuleiro.js"></script>
+  <script src="src/createTabuleiro/pieces.js"></script>
+  <script src="src/createTabuleiro/createPieces.js"></script>
+
+  <script src="src/pieces/choosePieces.js"></script>
+ <!--
+  <script src="src/pieces/previewPlays.js"></script>
+  
+ -->
+
+  <script src="src/pieces/pawns/paws.js"></script>
+  <script src="src/pieces/pawns/moveBlackPawn.js"></script>
+  <script src="src/pieces/pawns/killOponent.js"></script>
+  <script src="src/pieces/pawns/previewPlaysPawn.js"></script>
+
+  <script src="src/pieces/horse/horse.js"></script>
+  <script src="src/pieces/horse/horseMove.js"></script>
+  <script src="src/pieces/horse/horseKillOponent.js"></script>
+  <script src="src/pieces/horse/previewPlaysHorse.js"></script>
+
 </html>
